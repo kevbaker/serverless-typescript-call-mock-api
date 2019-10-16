@@ -18,7 +18,7 @@ Before deploying the service, AWS credentials must be configured. To configure A
 Next, copy the Access key ID and Secret access key to your clipboard for use in your Serverless Framework configuration. Configure the Serverless Framework with your access keys using the serverless config credentials command:
 
 ```bash
-$ serverless config credentials --provider aws --key AWS_CREDENTIALS_KEY --secret AWS_CREDENTIALS_SECRET --profile serverless-aws-admin
+serverless config credentials --provider aws --key AWS_CREDENTIALS_KEY --secret AWS_CREDENTIALS_SECRET --profile serverless-aws-admin
 ```
 
 Output:
