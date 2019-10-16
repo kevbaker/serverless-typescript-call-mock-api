@@ -4,7 +4,8 @@
   "description": "Serverless webpack example using Typescript. Based on template: `aws-nodejs-typescript` using this getting started guide: `https://www.jamestharpe.com/serverless-typescript-getting-started`",
   "main": "handler.js",
   "scripts": {
-    "test": "mocha -r ts-node/register ./**/*.spec.ts"
+    "test": "mocha -r ts-node/register ./**/*.spec.ts",
+    "logs:hello": "serverless logs -f hello -t"
   },
   "dependencies": {
     "axios": "^0.19.0",
