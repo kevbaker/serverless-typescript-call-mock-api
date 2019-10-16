@@ -19,10 +19,8 @@ export const hello: Handler = async (event: APIGatewayEvent, context: Context, c
     statusCode: 200,
     body: JSON.stringify({
       message: 'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
-      mockResponse: mockResponse,
-      input: event
+      mockResponse: mockResponse
     }),
   };
-
-  cb(null, response);
+  return response;
 }
