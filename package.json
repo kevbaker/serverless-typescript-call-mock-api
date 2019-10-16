@@ -1,7 +1,7 @@
 {
   "name": "aws-nodejs-typescript",
   "version": "1.0.0",
-  "description": "Serverless webpack example using Typescript",
+  "description": "Serverless webpack example using Typescript. Based on template: `aws-nodejs-typescript` using this getting started guide: `https://www.jamestharpe.com/serverless-typescript-getting-started`",
   "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,6 @@
     "typescript": "^2.8.1",
     "webpack": "^4.5.0"
   },
-  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "author": "Kevin Baker <kbaker@atomeq.com>",
   "license": "MIT"
 }
