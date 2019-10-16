@@ -4,16 +4,21 @@
   "description": "Serverless webpack example using Typescript. Based on template: `aws-nodejs-typescript` using this getting started guide: `https://www.jamestharpe.com/serverless-typescript-getting-started`",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register ./**/*.spec.ts"
   },
   "dependencies": {
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.1",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
     "@types/node": "^8.0.57",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
     "serverless-webpack": "^5.1.1",
     "ts-loader": "^4.2.0",
+    "ts-node": "^8.4.1",
     "typescript": "^2.8.1",
     "webpack": "^4.5.0"
   },
