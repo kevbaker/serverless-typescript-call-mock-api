@@ -5,10 +5,14 @@ service:
 plugins:
   - serverless-webpack
 
+custom: 
+  secrets: ${file(./.secrets.yml)}
+
 provider:
   name: aws
   runtime: nodejs8.10
-  # runtime: nodejs10.x
+  environment:
+    GOOGLE_PLACES_KEY: ${self:custom.secrets.GOOGLE_PLACES_KEY}
 
 profile: serverless-aws-admin
 

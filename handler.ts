@@ -36,18 +36,47 @@ import axios from 'axios';
  * Results:
  * - FIXED!
  */
+// export const hello: Handler = async (event: APIGatewayEvent, context: Context) => {
+//   // External Http call with Axios
+//   // let URL:string = "https://api.weather.gov/points/39.7456,-97.0892";
+//   let URL:string = "https://demo8946897.mockable.io";
+//   let mockResponse = await axios.get(URL,{});
+
+//   // Send response
+//   const response = {
+//     statusCode: 200,
+//     body: JSON.stringify({
+//       message: 'Your function executed successfully!!',
+//       mockResponse: mockResponse.data
+//     }),
+//   };
+//   return response;
+// }
+
+/**
+ * Test Google Places Call
+ * @param event 
+ * @param context 
+ */
 export const hello: Handler = async (event: APIGatewayEvent, context: Context) => {
   // External Http call with Axios
   // let URL:string = "https://api.weather.gov/points/39.7456,-97.0892";
-  let URL:string = "https://demo8946897.mockable.io";
-  let mockResponse = await axios.get(URL,{});
-
+  // let URL:string = "https://demo8946897.mockable.io";
+  let paramList = {
+    input: "03861",
+    inputtype: "textquery",
+    fields: "photos,formatted_address,name,rating,opening_hours,permanently_closed,geometry,icon,permanently_closed,place_id",
+    key: process.env.GOOGLE_PLACES_KEY
+  }
+  let URL:string = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json";
+  let placeResponse = await axios.get(URL,{params: paramList});
+  
   // Send response
   const response = {
     statusCode: 200,
     body: JSON.stringify({
       message: 'Your function executed successfully!!',
-      mockResponse: mockResponse.data
+      mockResponse: placeResponse.data
     }),
   };
   return response;
