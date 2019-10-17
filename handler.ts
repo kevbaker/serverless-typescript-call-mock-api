@@ -60,8 +60,6 @@ import axios from 'axios';
  */
 export const hello: Handler = async (event: APIGatewayEvent, context: Context) => {
   // External Http call with Axios
-  // let URL:string = "https://api.weather.gov/points/39.7456,-97.0892";
-  // let URL:string = "https://demo8946897.mockable.io";
   let paramList = {
     input: "03861",
     inputtype: "textquery",
